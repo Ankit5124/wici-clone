@@ -1,0 +1,123 @@
+/* ==========================================================================
+   WiCi One Product Page Stylesheet
+   Matches 1:1 with https://wici.ai/wici-one
+   ========================================================================== */
+
+:root {
+  --wici-purple: #56558e;
+  --wici-purple-hover: #6664a5;
+  --wici-purple-light: #e8e8f2;
+  --wici-purple-accent: #c0bfe4;
+  --wici-dark: #1d1d1f;
+  --wici-gray: #6e6e73;
+  --wici-light-bg: #f5f5f7;
+  --wici-border: #d2d2d7;
+}
+
+/* 1. Hero Full-bleed Photo with Text Overlay */
+.wici-hero-photo {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  max-height: 820px;
+  background-color: #09090b;
+  overflow: hidden;
+}
+
+.wici-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+/* Floating Pill */
+.wici-floating-pill {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(210, 210, 215, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  color: #1d1d1f;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.wici-floating-pill:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+  border-color: #56558e;
+}
+
+/* 2. Sticky Subnav */
+.wici-subnav {
+  position: sticky;
+  top: 64px;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(210, 210, 215, 0.6);
+}
+
+/* 3. Dark Merge Card */
+.qc-card {
+  background: linear-gradient(135deg, #18181c 0%, #111113 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* 4. Compare Table Highlight */
+.wici-col-highlight {
+  background: #f1f0f7;
+  border-left: 2px solid #56558e;
+  border-right: 2px solid #56558e;
+}
+
+/* 5. Persona & Category Tabs */
+.wici-tab-btn {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.wici-tab-btn.is-active {
+  background-color: #56558e;
+  color: #ffffff;
+}
+
+.wici-tab-btn:not(.is-active) {
+  background-color: #ffffff;
+  color: #6e6e73;
+  border: 1px solid #d2d2d7;
+}
+
+.wici-tab-btn:not(.is-active):hover {
+  border-color: #56558e;
+  color: #1d1d1f;
+}
+
+/* 6. Explainer Purple Runtime Banner */
+.wici-runtime-banner {
+  background: radial-gradient(ellipse 70% 60% at 85% 0%, rgba(86, 85, 142, 0.55), transparent 70%),
+              linear-gradient(170deg, #56558e 0%, #6664a5 55%, #56558e 100%);
+  color: #ffffff;
+}
